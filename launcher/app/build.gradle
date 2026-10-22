@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'dev.tvhome.minimal'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'dev.tvhome.minimal'
+        minSdk 22          // Fire OS 5+ / Android TV 5.1+
+        targetSdk 30
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+// Fără nicio dependență externă: APK mic, fără permisiuni.
